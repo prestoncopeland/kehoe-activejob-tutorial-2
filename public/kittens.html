@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mailing List Signup</title>
+    <meta name="description" content="Mailing List Signup">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script>
+      function start() {
+          var ref = document.getElementById('referrer');
+          ref.value = document.referrer;
+        }
+      onload = start;
+    </script>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="span9 centered">
+          <img src="http://lorempixel.com/1170/600/cats/9">
+          <br />
+          <div class="span3 well text-center">
+            <legend>Like kittens? Join the mailing list!</legend>
+            <form accept-charset="UTF-8" action="/visitors" method="post">
+              <input name="visitor[referrer]" type="hidden" value="" id="referrer" />
+              <input name="visitor[affinity]" type="hidden" value="KITTENS" />
+              <input name="visitor[email]" placeholder="Email" type="email" />
+              <input class="btn btn-primary" name="commit" type="submit" value="Sign up" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
